@@ -17,8 +17,8 @@ module.exports = (app, db) => {
 
     const whisper = {
       _id: new ObjectID(1),
-      text: req.body.body,
-      author: req.body.title,
+      text: req.body.text,
+      author: req.body.author,
       rating: 0,
       votes: [req.ip]
     };
