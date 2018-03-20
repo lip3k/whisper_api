@@ -3,7 +3,6 @@ const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 let db = require('./config/db');
 const app = express();
-const port = 3000;
 
 app.use(bodyParser.urlencoded({
   extended: true
@@ -16,7 +15,7 @@ MongoClient.connect(db.url, (err, database) => {
 
   require('./app/routes')(app, db);
 
-  app.listen(port, () => {
+  app.listen(process.env.PORT || 3000, () => {
     console.log('Live on', port);
   });
 })
