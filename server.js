@@ -16,6 +16,6 @@ MongoClient.connect(db.url, (err, database) => {
   require('./app/routes')(app, db);
 
   app.listen(process.env.PORT || 3000, () => {
-    console.log('Live on', port);
+    console.log('Live');
   });
 })
