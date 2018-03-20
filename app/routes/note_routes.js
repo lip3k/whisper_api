@@ -3,8 +3,7 @@ var ObjectID = require('mongodb').ObjectID;
 module.exports = (app, db) => {
 
 
-
-  app.get('/whispers', (req, res) => {
+  app.get('/all_whispers', (req, res) => {
     db.collection('whispers').find({}).toArray((err, whispers) => {
       if (err) throw error;
       res.send(whispers);
@@ -12,9 +11,7 @@ module.exports = (app, db) => {
   });
 
 
-
-  app.post('/whisper', (req, res) => {
-
+  app.post('/new_whisper', (req, res) => {
     const whisper = {
       _id: new ObjectID(1),
       text: req.body.text,
