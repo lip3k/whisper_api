@@ -51,7 +51,7 @@ module.exports = (app, db) => {
 
 
 
-  app.put('/giveLove/:id', (req, res) => {
+  app.put('/giveLove', (req, res) => {
     const id = req.params.id;
 
     db.collection('whispers').findOne({ _id: id }, (err, whisper) => {
