@@ -4,6 +4,7 @@ module.exports = (app, db) => {
 
 
   app.get('/all_whispers', (req, res) => {
+    console.log(new ObjectID(1));
     db.collection('whispers').find({}).toArray((err, whispers) => {
       if (err) throw error;
       res.send(whispers);
@@ -13,7 +14,6 @@ module.exports = (app, db) => {
 
   app.post('/new_whisper', (req, res) => {
     const whisper = {
-      _id: new ObjectID(1),
       text: req.body.text,
       author: req.body.author,
       rating: 0,
