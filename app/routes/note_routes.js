@@ -3,69 +3,90 @@ var ObjectID = require('mongodb').ObjectID;
 module.exports = (app, db) => {
 
 
-  app.get('/all_whispers', (req, res) => {
-    console.log(new ObjectID(1));
-    db.collection('whispers').find({}).toArray((err, whispers) => {
-      if (err) throw error;
-      res.send(whispers);
-    });
-  });
+    app.get('/all_whispers', (req, res) => {
+        console.log(new ObjectID(1));
+        db.collection('whispers').find({}).toArray((err, whispers) => {
+            if (err) throw error;
 
+            whispers = whispers.map(item => {
+                item['voted'] = item.votes.includes(req.ip);
+                return item;
+            });
 
-  app.post('/new_whisper', (req, res) => {
-    const whisper = {
-      text: req.body.text,
-      author: req.body.author,
-      rating: 0,
-      votes: [req.ip]
-    };
-
-    db.collection('whispers').insert(whisper, (err, result) => {
-      if (err) {
-        res.send({
-          'error': 'An error has occurred'
+            res.send(whispers);
         });
-      } else {
-        res.send(result.ops[0]);
-      }
-    });
-  });
-
-
-
-  // app.delete('/notes/:id', (req, res) => {
-  //   const id = req.params.id;
-  //   const details = {
-  //     '_id': new ObjectID(id)
-  //   };
-  //   db.collection('notes').remove(details, (err, item) => {
-  //     if (err) {
-  //       res.send({
-  //         'error': 'An error has occurred'
-  //       });
-  //     } else {
-  //       res.send('Note ' + id + ' deleted!');
-  //     }
-  //   });
-  // });
-
-
-
-  app.put('/giveLove', (req, res) => {
-    const id = req.params.id;
-
-    db.collection('whispers').findOne({ _id: id }, (err, whisper) => {
-        console.log(whisper);
     });
 
-    db.collection('whispers').update(details, note, (err, result) => {
-      if (err) {
-        res.send({
-          'error': 'An error has occurred'
+
+    app.post('/new_whisper', (req, res) => {
+        const whisper = {
+            text: req.body.text,
+            author: req.body.author,
+            postedOn: Date.now(),
+            rating: 0,
+            votes: [],
+        };
+
+        db.collection('whispers').insert(whisper, (err, result) => {
+            if (err) {
+                res.send({
+                    'error': 'An error has occurred'
+                });
+            } else {
+                res.send(result.ops[0]);
+            }
         });
-      } else {
-        res.send(note);
-      }
     });
-  });
+
+
+    // app.delete('/notes/:id', (req, res) => {
+    //   const id = req.params.id;
+    //   const details = {
+    //     '_id': new ObjectID(id)
+    //   };
+    //   db.collection('notes').remove(details, (err, item) => {
+    //     if (err) {
+    //       res.send({
+    //         'error': 'An error has occurred'
+    //       });
+    //     } else {
+    //       res.send('Note ' + id + ' deleted!');
+    //     }
+    //   });
+    // });
+
+
+    app.put('/giveLove/:id', (req, res) => {
+        const id = req.params.id;
+        db.collection('whispers').findOne({"_id": ObjectID(id)}, (err, whisper) => {
+            if (err) {
+                res.send({
+                    'error': 'An error has occurred'
+                });
+                return;
+            }
+
+            if (whisper.votes.includes(req.ip)) {
+                res.send({
+                    'error': 'Already voted for this one mate'
+                });
+                return;
+            }
+
+            whisper.rating += 1;
+            whisper.votes.push(req.ip);
+
+            db.collection('whispers').update({"_id": ObjectID(id)}, whisper, (err, updateRes) => {
+                if (err) {
+                    res.send({
+                        'error': 'An error has occurred'
+                    });
+                } else {
+                    res.send(updateRes);
+                }
+            });
+        });
+
+
+    });
 };
