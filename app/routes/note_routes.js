@@ -58,10 +58,8 @@ module.exports = (app, db) => {
 
     app.get('/giveLove/:id', (req, res) => {
         const id = req.params.id;
-        console.log('IN API');
         db.collection('whispers').findOne({"_id": ObjectID(id)}, (err, whisper) => {
             if (err) {
-                console.log('ERROR');
                 res.send({
                     'error': 'An error has occurred'
                 });
@@ -69,7 +67,6 @@ module.exports = (app, db) => {
             }
 
             if (whisper.votes.includes(req.ip)) {
-                console.log('ERROR: VOTED BEFORE');
                 res.send({
                     'error': 'Already voted for this one mate'
                 });
@@ -78,19 +75,15 @@ module.exports = (app, db) => {
 
             whisper.rating += 1;
             if (req.ip) {
-                console.log('ADDED IP TO VOTES');
                 whisper.votes.push(req.ip);
             }
 
             db.collection('whispers').update({"_id": ObjectID(id)}, whisper, (err, updateRes) => {
-                console.log('UPDATING');
                 if (err) {
-                    console.log('ERROR UPDATING');
                     res.send({
                         'error': 'An error has occurred'
                     });
                 } else {
-                    console.log('SUCCESS');
                     res.send(updateRes);
                 }
             });
