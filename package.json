@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
+    "deploy": "git add . && git commit -m 'deploy' && git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "lip3k",

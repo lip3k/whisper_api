@@ -74,7 +74,9 @@ module.exports = (app, db) => {
             }
 
             whisper.rating += 1;
-            whisper.votes.push(req.ip);
+            if (req.ip) {
+                whisper.votes.push(req.ip);
+            }
 
             db.collection('whispers').update({"_id": ObjectID(id)}, whisper, (err, updateRes) => {
                 if (err) {
