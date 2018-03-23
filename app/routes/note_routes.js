@@ -56,7 +56,7 @@ module.exports = (app, db) => {
     // });
 
 
-    app.put('/giveLove/:id', (req, res) => {
+    app.get('/giveLove/:id', (req, res) => {
         const id = req.params.id;
         console.log('IN API');
         db.collection('whispers').findOne({"_id": ObjectID(id)}, (err, whisper) => {
