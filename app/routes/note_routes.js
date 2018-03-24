@@ -20,7 +20,7 @@ module.exports = (app, db) => {
 
     app.post('/new_whisper', (req, res) => {
 
-        let author = req.body.author && req.body.author.length > 0 ? 'req.body.author' : 'Anonymous';
+        let author = req.body.author && req.body.author.length > 0 ? req.body.author : 'Anonymous';
 
         const whisper = {
             text: req.body.text,
