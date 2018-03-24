@@ -19,12 +19,15 @@ module.exports = (app, db) => {
 
 
     app.post('/new_whisper', (req, res) => {
+
+        let author = req.body.author && req.body.author.length > 0 ? 'req.body.author' : 'Anonymous';
+
         const whisper = {
             text: req.body.text,
-            author: req.body.author,
+            author: author,
             postedOn: Date.now(),
-            rating: 0,
-            votes: [],
+            rating: 1,
+            votes: [req.ip],
         };
 
         db.collection('whispers').insert(whisper, (err, result) => {
