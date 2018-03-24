@@ -1,7 +1,6 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
-let db = require('./config/db');
 const app = express();
 
 app.use(bodyParser.urlencoded({
@@ -16,10 +15,12 @@ app.use(function(req, res, next) {
 });
 
 
-MongoClient.connect(db.url, (err, database) => {
-  if (err) return console.log(err)
+MongoClient.connect(process.env.DB_URL, (err, database) => {
+  if (err) {
+      return console.log(err);
+  }
 
-  db = database.db('whisper_db')
+  db = database.db('whisper_db');
 
   require('./app/routes')(app, db);
 
