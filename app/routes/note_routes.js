@@ -1,11 +1,28 @@
 var ObjectID = require('mongodb').ObjectID;
-
+var LIMIT = 5;
 module.exports = (app, db) => {
 
 
     app.get('/all_whispers', (req, res) => {
         console.log(new ObjectID(1));
-        db.collection('whispers').find({}).skip(5).limit(5).toArray((err, whispers) => {
+
+        db.collection('whispers').find({}).skip(5).limit(20).toArray((err, whispers) => {
+            if (err) throw error;
+
+            whispers = whispers.map(item => {
+                item['voted'] = item.votes.includes(req.ip);
+                return item;
+            });
+
+            res.send(whispers);
+        });
+    });
+
+    app.get('/getWhispers/:index', (req, res) => {
+
+        let index = req.params.index || 0;
+
+        db.collection('whispers').find({}).skip(index * LIMIT).limit(LIMIT).toArray((err, whispers) => {
             if (err) throw error;
 
             whispers = whispers.map(item => {
