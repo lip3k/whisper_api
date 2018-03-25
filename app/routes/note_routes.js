@@ -1,5 +1,5 @@
 var ObjectID = require('mongodb').ObjectID;
-var LIMIT = 5;
+var LIMIT = 20;
 module.exports = (app, db) => {
 
 
