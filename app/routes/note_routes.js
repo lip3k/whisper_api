@@ -5,7 +5,7 @@ module.exports = (app, db) => {
 
     app.get('/all_whispers', (req, res) => {
         console.log(new ObjectID(1));
-        db.collection('whispers').find({}).toArray((err, whispers) => {
+        db.collection('whispers').find({}, {$slice: 5}).toArray((err, whispers) => {
             if (err) throw error;
 
             whispers = whispers.map(item => {
@@ -21,7 +21,7 @@ module.exports = (app, db) => {
     app.post('/new_whisper', (req, res) => {
 
         let author = req.body.author && req.body.author.length > 0 ? req.body.author : 'Anonymous';
-        console.log(req.body.text);
+
         const whisper = {
             text: req.body.text,
             author: author,
