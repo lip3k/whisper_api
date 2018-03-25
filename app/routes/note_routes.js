@@ -5,7 +5,7 @@ module.exports = (app, db) => {
 
     app.get('/all_whispers', (req, res) => {
         console.log(new ObjectID(1));
-        db.collection('whispers').find({}, {$slice: 5}).toArray((err, whispers) => {
+        db.collection('whispers').find({}).skip(5).limit(5).toArray((err, whispers) => {
             if (err) throw error;
 
             whispers = whispers.map(item => {
