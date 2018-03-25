@@ -23,8 +23,8 @@ module.exports = (app, db) => {
         let author = req.body.author && req.body.author.length > 0 ? req.body.author : 'Anonymous';
 
         const whisper = {
-            text: req.body.text,
-            author: author,
+            text: req.body.text.replace(/[^\w\s\:]/gi, '').trim(),
+            author: author.replace(/[^\w\s\:]/gi, '').trim(),
             postedOn: Date.now(),
             rating: 1,
             votes: [req.ip],
