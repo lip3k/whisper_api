@@ -4,8 +4,7 @@ module.exports = (app, db) => {
 
 
     app.get('/all_whispers', (req, res) => {
-        console.log(new ObjectID(1));
-
+        getNextSequenceValue();
         db.collection('whispers').find({}).skip(5).limit(20).toArray((err, whispers) => {
             if (err) throw error;
 
@@ -57,6 +56,17 @@ module.exports = (app, db) => {
             }
         });
     });
+
+    function getNextSequenceValue(){
+
+        db.collection('counters').find({}).limit(1).toArray((err, counters) => {
+            if (err) throw error;
+
+            console.log(counters);
+
+            return counters.whispers;
+        });
+    }
 
 
     // app.delete('/notes/:id', (req, res) => {
