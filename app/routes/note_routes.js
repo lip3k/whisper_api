@@ -39,22 +39,22 @@ module.exports = (app, db) => {
     app.post('/new_whisper', (req, res) => {
 
         let counters = getCounters();
-        let sequence;
         counters.then((result) => {
-            sequence = result.whispers + 1;
+            counters = result;
         });
 
-        saveCounters(counter);
+        counters.whispers += 1;
+        saveCounters(counters);
 
         let author = req.body.author && req.body.author.length > 0 ? req.body.author : 'Anonymous';
 
         const whisper = {
-            sequence: sequence,
             text: req.body.text,
             author: author,
             postedOn: Date.now(),
             rating: 1,
             votes: [req.ip],
+            sequence: counters.whispers
         };
 
         db.collection('whispers').insert(whisper, (err, result) => {

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9aefe0af-0201-45e1-8fc1-db8ebd186127" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app/routes/note_routes.js" afterPath="$PROJECT_DIR$/app/routes/note_routes.js" />
-      <change beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,10 +19,10 @@
       <file leaf-file-name="note_routes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes/note_routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+            <state relative-caret-position="644">
+              <caret line="56" column="39" lean-forward="true" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
               <folding>
-                <marker date="1522093064201" expanded="true" signature="1901:2120" ph="..." />
+                <marker date="1522093206591" expanded="true" signature="1907:2126" ph="..." />
               </folding>
             </state>
           </provider>
@@ -166,12 +165,12 @@
       <workItem from="1521832735954" duration="3457000" />
       <workItem from="1521883580875" duration="3291000" />
       <workItem from="1521998462749" duration="5703000" />
-      <workItem from="1522087342263" duration="4521000" />
+      <workItem from="1522087342263" duration="4651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22437000" />
+    <option name="totallyTimeSpent" value="22567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -213,7 +212,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522093064201" expanded="true" signature="1901:2120" ph="..." />
+            <marker date="1522093206591" expanded="true" signature="1907:2126" ph="..." />
           </folding>
         </state>
       </provider>
@@ -239,7 +238,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522093064201" expanded="true" signature="1901:2120" ph="..." />
+            <marker date="1522093206591" expanded="true" signature="1907:2126" ph="..." />
           </folding>
         </state>
       </provider>
@@ -266,7 +265,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522093064201" expanded="true" signature="1901:2120" ph="..." />
+            <marker date="1522093206591" expanded="true" signature="1907:2126" ph="..." />
           </folding>
         </state>
       </provider>
@@ -292,7 +291,7 @@
         <state relative-caret-position="1120">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="55" selection-end-column="10" />
           <folding>
-            <marker date="1522093064201" expanded="true" signature="1901:2120" ph="..." />
+            <marker date="1522093206591" expanded="true" signature="1907:2126" ph="..." />
           </folding>
         </state>
       </provider>
@@ -318,7 +317,7 @@
         <state relative-caret-position="1120">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="55" selection-end-column="10" />
           <folding>
-            <marker date="1522093064201" expanded="true" signature="1901:2120" ph="..." />
+            <marker date="1522093206591" expanded="true" signature="1907:2126" ph="..." />
           </folding>
         </state>
       </provider>
@@ -344,7 +343,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522093064201" expanded="true" signature="1901:2120" ph="..." />
+            <marker date="1522093206591" expanded="true" signature="1907:2126" ph="..." />
           </folding>
         </state>
       </provider>
@@ -368,10 +367,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/note_routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        <state relative-caret-position="644">
+          <caret line="56" column="39" lean-forward="true" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
           <folding>
-            <marker date="1522093064201" expanded="true" signature="1901:2120" ph="..." />
+            <marker date="1522093206591" expanded="true" signature="1907:2126" ph="..." />
           </folding>
         </state>
       </provider>
