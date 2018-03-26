@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9aefe0af-0201-45e1-8fc1-db8ebd186127" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app/routes/note_routes.js" afterPath="$PROJECT_DIR$/app/routes/note_routes.js" />
-      <change beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,22 +18,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.4584871">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="note_routes.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/routes/note_routes.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="223">
-                  <caret line="112" column="47" lean-forward="false" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="47" />
-                  <folding>
-                    <marker date="1522094734320" expanded="true" signature="2474:2765" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="api.service.ts" pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/whisper/src/app/_services/api.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
+                <state relative-caret-position="112">
                   <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
                   <folding />
                 </state>
@@ -63,24 +50,26 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="captcha.service.ts" pinned="false" current-in-tab="false">
+          <file leaf-file-name="captcha.service.ts" pinned="false" current-in-tab="true">
             <entry file="file://$USER_HOME$/whisper/src/app/_services/captcha.service.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="196">
+                  <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
                   <folding>
-                    <element signature="e#0#43#0" expanded="true" />
+                    <element signature="e#0#41#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="environment.prod.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/whisper/src/environments/environment.prod.ts">
+          <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/whisper/src/app/app.module.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="56">
-                  <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-                  <folding />
+                <state relative-caret-position="840">
+                  <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+                  <folding>
+                    <element signature="e#0#58#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -88,10 +77,32 @@
           <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/whisper/src/app/app.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="335">
-                  <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+                <state relative-caret-position="784">
+                  <caret line="88" column="2" lean-forward="false" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="2" />
                   <folding>
                     <element signature="e#0#65#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="whisper-composer.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/whisper/src/app/whisper-composer/whisper-composer.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="616">
+                  <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="whisper-composer.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/whisper/src/app/whisper-composer/whisper-composer.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="335">
+                  <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+                  <folding>
+                    <element signature="e#0#80#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -101,23 +112,13 @@
             <entry file="file://$USER_HOME$/whisper/src/app/app.component.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="558">
-                  <caret line="31" column="82" lean-forward="false" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
+                  <caret line="31" column="76" lean-forward="false" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/package.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="196">
-                  <caret line="7" column="78" lean-forward="false" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="504">
@@ -134,10 +135,10 @@
           <file leaf-file-name="note_routes.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/routes/note_routes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1820">
-                  <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+                <state relative-caret-position="-616">
+                  <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
                   <folding>
-                    <marker date="1522094734320" expanded="true" signature="2474:2765" ph="..." />
+                    <marker date="1522096321444" expanded="true" signature="2503:2794" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -154,14 +155,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/routes/note_routes.js" />
-        <option value="$USER_HOME$/whisper/src/app/app.component.ts" />
-        <option value="$USER_HOME$/whisper/src/app/app.component.html" />
         <option value="$USER_HOME$/whisper/src/environments/environment.ts" />
         <option value="$USER_HOME$/whisper/src/environments/environment.prod.ts" />
         <option value="$USER_HOME$/whisper/src/app/_services/api.service.ts" />
         <option value="$USER_HOME$/whisper/package.json" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$USER_HOME$/whisper/src/app/app.component.ts" />
+        <option value="$USER_HOME$/whisper/src/app/app.component.html" />
+        <option value="$USER_HOME$/whisper/src/app/whisper-composer/whisper-composer.component.ts" />
+        <option value="$PROJECT_DIR$/app/routes/note_routes.js" />
+        <option value="$USER_HOME$/whisper/src/app/app.module.ts" />
+        <option value="$USER_HOME$/whisper/src/app/_services/captcha.service.ts" />
       </list>
     </option>
   </component>
@@ -203,6 +207,40 @@
             <path>
               <item name="whisper_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="whisper_api" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="whisper_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="whisper_api" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="whisper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="whisper_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="whisper_api" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="whisper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="whisper_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="whisper_api" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="whisper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="whisper_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="whisper_api" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="whisper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="_services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="whisper_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="whisper_api" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="whisper" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="whisper-composer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="whisper_api" type="b2602c69:ProjectViewProjectNode" />
@@ -268,12 +306,12 @@
       <workItem from="1521832735954" duration="3457000" />
       <workItem from="1521883580875" duration="3291000" />
       <workItem from="1521998462749" duration="5703000" />
-      <workItem from="1522087342263" duration="6719000" />
+      <workItem from="1522087342263" duration="8397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24635000" />
+    <option name="totallyTimeSpent" value="26313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
@@ -316,7 +354,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522094734320" expanded="true" signature="2474:2765" ph="..." />
+            <marker date="1522096321444" expanded="true" signature="2503:2794" ph="..." />
           </folding>
         </state>
       </provider>
@@ -342,7 +380,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522094734320" expanded="true" signature="2474:2765" ph="..." />
+            <marker date="1522096321444" expanded="true" signature="2503:2794" ph="..." />
           </folding>
         </state>
       </provider>
@@ -369,7 +407,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522094734320" expanded="true" signature="2474:2765" ph="..." />
+            <marker date="1522096321444" expanded="true" signature="2503:2794" ph="..." />
           </folding>
         </state>
       </provider>
@@ -395,7 +433,7 @@
         <state relative-caret-position="1120">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="55" selection-end-column="10" />
           <folding>
-            <marker date="1522094734320" expanded="true" signature="2474:2765" ph="..." />
+            <marker date="1522096321444" expanded="true" signature="2503:2794" ph="..." />
           </folding>
         </state>
       </provider>
@@ -421,7 +459,7 @@
         <state relative-caret-position="1120">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="55" selection-end-column="10" />
           <folding>
-            <marker date="1522094734320" expanded="true" signature="2474:2765" ph="..." />
+            <marker date="1522096321444" expanded="true" signature="2503:2794" ph="..." />
           </folding>
         </state>
       </provider>
@@ -447,7 +485,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522094734320" expanded="true" signature="2474:2765" ph="..." />
+            <marker date="1522096321444" expanded="true" signature="2503:2794" ph="..." />
           </folding>
         </state>
       </provider>
@@ -461,34 +499,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/db.js" />
-    <entry file="file://$PROJECT_DIR$/app/routes/note_routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="112" column="47" lean-forward="false" selection-start-line="112" selection-start-column="47" selection-end-line="112" selection-end-column="47" />
-          <folding>
-            <marker date="1522094734320" expanded="true" signature="2474:2765" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/whisper/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="82" lean-forward="false" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/whisper/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="55" column="2" lean-forward="false" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/whisper/src/environments/environment.prod.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -507,24 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/whisper/src/app/_services/captcha.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/whisper/src/app/_services/api.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/whisper/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -538,6 +530,80 @@
         <state relative-caret-position="504">
           <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/whisper/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="76" lean-forward="false" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/whisper/src/app/whisper-composer/whisper-composer.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/note_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-616">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <marker date="1522096321444" expanded="true" signature="2503:2794" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/whisper/src/app/whisper-composer/whisper-composer.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/whisper/src/app/_services/api.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/whisper/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="88" column="2" lean-forward="false" selection-start-line="88" selection-start-column="2" selection-end-line="88" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/whisper/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/whisper/src/app/_services/captcha.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
