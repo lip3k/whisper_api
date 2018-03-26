@@ -5,8 +5,8 @@ module.exports = (app, db) => {
 
     app.get('/all_whispers', (req, res) => {
 
-        console.log('COUNT', db.collection('whispers').count());
-        console.log(getCounters());
+        // console.log('COUNT', db.collection('whispers').count());
+
 
         db.collection('whispers').find({}).skip(5).limit(20).toArray((err, whispers) => {
             if (err) throw error;
@@ -38,16 +38,18 @@ module.exports = (app, db) => {
 
     app.post('/new_whisper', (req, res) => {
 
-        let counter = getCounters();
-        console.log(counter);
-        counter.whispers += 1;
+        let counters = getCounters();
+        let sequence;
+        counters.then((result) => {
+            sequence = result.whispers + 1;
+        });
 
         saveCounters(counter);
 
         let author = req.body.author && req.body.author.length > 0 ? req.body.author : 'Anonymous';
 
         const whisper = {
-            sequence: counter.whispers,
+            sequence: sequence,
             text: req.body.text,
             author: author,
             postedOn: Date.now(),
@@ -67,7 +69,24 @@ module.exports = (app, db) => {
     });
 
     function getCounters() {
-        return db.collection('counters').find({});
+       return new Promise((resolve, reject) => {
+/*           return db.collection('counters').find({}(err, result) => {
+               if (err) {
+                   reject(err);
+               } else {
+                   resolve(result);
+               }
+           });*/
+           db.collection('counters').find({}).toArray((err, result) => {
+               if (err) throw error;
+               if (err) {
+                   reject(err);
+               } else {
+                   resolve(result);
+               }
+
+           });
+       });
     }
 
     function saveCounters(counters) {
