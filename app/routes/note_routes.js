@@ -38,7 +38,7 @@ module.exports = (app, db) => {
     app.post('/new_whisper', (req, res) => {
 
         let counter = getCounters();
-
+        console.log(counter);
         counter.whispers += 1;
 
         saveCounters(counter);
