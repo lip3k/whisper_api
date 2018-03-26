@@ -5,7 +5,8 @@ module.exports = (app, db) => {
 
     app.get('/all_whispers', (req, res) => {
 
-        console.log(db.collection('whispers').count());
+        console.log('COUNT', db.collection('whispers').count());
+        console.log(getCounters());
 
         db.collection('whispers').find({}).skip(5).limit(20).toArray((err, whispers) => {
             if (err) throw error;
@@ -66,20 +67,12 @@ module.exports = (app, db) => {
     });
 
     function getCounters() {
-        db.collection('counters').find({}).limit(1).toArray((err, counters) => {
-            if (err) throw error;
-            return counters;
-        });
+        return db.collection('counters').find({});
     }
 
     function saveCounters(counters) {
-        db.collection('counters').update({"_id": ObjectID(counters._id)}, counters, (err, updateRes) => {
-            if (err) {
-                res.send({
-                    'error': 'An error has occurred'
-                });
-            }
-        });
+
+
     }
 
 
