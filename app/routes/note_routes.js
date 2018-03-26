@@ -42,7 +42,6 @@ module.exports = (app, db) => {
         counters.then((result) => {
             counters = result;
         });
-
         counters.whispers += 1;
         saveCounters(counters);
 
@@ -69,29 +68,34 @@ module.exports = (app, db) => {
     });
 
     function getCounters() {
-       return new Promise((resolve, reject) => {
-/*           return db.collection('counters').find({}(err, result) => {
-               if (err) {
-                   reject(err);
-               } else {
-                   resolve(result);
-               }
-           });*/
-           db.collection('counters').find({}).toArray((err, result) => {
-               if (err) throw error;
-               if (err) {
-                   reject(err);
-               } else {
-                   resolve(result);
-               }
+        return new Promise((resolve, reject) => {
+            /*           return db.collection('counters').find({}(err, result) => {
+                           if (err) {
+                               reject(err);
+                           } else {
+                               resolve(result);
+                           }
+                       });*/
+            db.collection('counters').find({}).toArray((err, result) => {
+                if (err) throw error;
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(result);
+                }
 
-           });
-       });
+            });
+        });
     }
 
     function saveCounters(counters) {
-
-
+        db.collection('counters').update({"_id": ObjectID(counters._id)}, counters, (err, updateRes) => {
+            if (err) {
+                res.send({
+                    'error': 'An error has occurred'
+                });
+            }
+        });
     }
 
 
