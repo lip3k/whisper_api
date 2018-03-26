@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
     next();
 });
 
-let DB = 'mongodb://whisperer:apt8gvs3@ds213118.mlab.com:13118/whisper_db';
+let db = 'mongodb://whisperer:apt8gvs3@ds213118.mlab.com:13118/whisper_db';
 
-MongoClient.connect(DB || process.env.DB_URL, (err, database) => {
+MongoClient.connect(process.env.DB_URL || db, (err, database) => {
   if (err) {
       return console.log(err);
   }
