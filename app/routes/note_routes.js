@@ -68,7 +68,7 @@ module.exports = (app, db) => {
     function getCounters() {
         db.collection('counters').find({}).limit(1).toArray((err, counters) => {
             if (err) throw error;
-            return counters;
+            return counters[0];
         });
     }
 
