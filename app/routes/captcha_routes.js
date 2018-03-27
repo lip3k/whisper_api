@@ -6,9 +6,8 @@ const CAPTCHA_URL = 'https://www.google.com/recaptcha/api/siteverify';
 module.exports = (app, db) => {
 
     app.post('/verify', (req, res) => {
-        // axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+        const secret = process.env.CAPTCHA_SECRET;
 
-        const secret = process.env.CAPTCHA_SECRET || '6Lcu300UAAAAADXqIdLw3ZDaI-Ri6nvEO8V_F40j';
         if (!secret) {
             res.send('Error while retrieving secret from environment variables');
         }
