@@ -1,6 +1,7 @@
-const noteRoutes = require('./note_routes');
+const whisperRoutes = require('./whisper_routes');
+const captchaRoutes = require('./captcha_routes');
 
 module.exports = (app, db) => {
-  noteRoutes(app, db);
-  // Other route groups could go here, in the future
+    whisperRoutes(app, db);
+    captchaRoutes(app, db);
 };
