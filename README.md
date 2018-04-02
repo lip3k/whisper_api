@@ -15,4 +15,4 @@ Node.js + Express <-> Mlab
 
 ## To do
 
-- ???
+- Code cleanup
